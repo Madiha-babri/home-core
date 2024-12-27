@@ -1,3 +1,15 @@
 from django.shortcuts import render
+from .models import Shop
 
-# Create your views here.
+
+def shop_list(request):
+    """
+    Renders the Shop page
+    """
+    shop = Shop.objects.all().order_by('-updated_on').first()
+
+    return render(
+        request,
+        "shop/shop.html",
+        {"shop": shop},
+    )

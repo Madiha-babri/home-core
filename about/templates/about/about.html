@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load crispy_forms_tags %}
 
 {% block content %}
 <!-- centered about heading. this code is my own -->
@@ -27,30 +26,6 @@
         <div class="col-12 col-md-8 mt-4">
             <h2>{{ about.title }}</h2>
             {{ about.content | safe }}
-        </div>
-    </div>
-
-    <!-- collaborate section-->
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-7 my-5">
-            <h2>Would you like to collaborate?</h2>
-            <p>Welcome to Statement Beauty Blog's collaboration form!
-              We're thrilled to invite fellow beauty professionals,
-              influencers and brands to join forces with us. 
-              Offer your services, share your expertise, product reviews, 
-              or collaborate on exciting projects. Perhaps you are just 
-              looking to shoot the breeze and brainstorm. Let's 
-              connect and create beauty magic together! Fill out the form 
-              below to get started.</p>
-
-            <!-- collaborate form: I added the 'interest' field to this model to make it my own -->
-            <form method="post">
-                {{ collaborate_form | crispy }}
-                {% csrf_token %}
-                <button class="btn btn-about" 
-                aria-label="click this button to submit your collaboration request"
-                type="submit">Submit</button>
-            </form>
         </div>
     </div>
 </div>
