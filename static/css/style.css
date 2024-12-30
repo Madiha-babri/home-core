@@ -1,24 +1,27 @@
 body {
-    background-color: #F9FAFC;
+    background-color: #ac864f;
 }
 
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: #9b42e4;
 }
 
-.red-o {
-    color: #E84610;
+
+.thin-gold {
+    font-weight: 900;
+    color: goldenrod;
 }
 
-.thin {
-    font-weight: 300;
+.navbar-text {
+    font-weight: 600;
+    color: #6e0fbd;
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: #ac864f;
 }
 
 .dark-bg {
@@ -46,6 +49,62 @@ body {
     background-color: #188181;
 }
 
+/* hero image */
+#hero-outer {
+    height: 54vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+.hero-image {
+    height: 54vh;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    /* animating zoom effect on the hero image when loading page */
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+  }
+  
+  /* creating a zoom for the hero image */
+  @keyframes hero-zoom {
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      transform: scale(1.1);
+    }
+  }
+
+
+
+  /* cover text under hero image */
+  .cover-text {
+    background-color: rgba(117, 86, 113, 0.9);
+    font-family: "Quicksand", sans-serif;
+    top: 8vh;
+    padding: 8px 7px 0px 7px;
+    text-align: center;
+    border-radius: 3px;
+    width: 100%;
+  }
+  
+  .cover-text > h1 {
+    color: #110c01;
+    padding-top: 8px;
+    font-size: 1.5rem;
+  }
+  
+  .cover-text > h2 {
+    color: #161206;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
 .scale {
     width: 100%;
     height: auto;
