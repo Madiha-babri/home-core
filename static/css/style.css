@@ -116,6 +116,15 @@ body {
     text-transform: uppercase;
 }
 
+.about-picture {
+    display: flex;
+    justify-content: center;  /* Horizontally center */
+    align-items: center;      /* Vertically center */
+    height: 30%; 
+    width: 100%;
+    border-radius: 50%;
+}
+
 .masthead {
     margin-top: 10px;
     overflow: hidden;
