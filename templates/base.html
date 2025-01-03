@@ -3,6 +3,7 @@
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
 {% url 'shop' as shop_url %}
+{% url 'booking' as booking_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -56,8 +57,13 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link
+                          {% if request.path == booking_url %}active" aria-current="page{% endif %}"
+                            href="{% url 'booking' %}">Book with Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link
                           {% if request.path == shop_url %}active" aria-current="page{% endif %}"
-                            href="{% url 'shop' %}">Shop by Inspiration</a>
+                            href="{% url 'shop' %}">Renovate by Inspiration</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -105,7 +111,8 @@
         {% endif %}
         <!-- for hero section -->
         <section id="hero-outer">
-            <img src="{% static 'images/hero-imagehomecore.jpg' %}" class="hero-image" alt="Image of a sitting room with sofas" />
+            <img src="{% static 'images/hero-imagehomecore.jpg' %}" class="hero-image"
+                alt="Image of a sitting room with sofas" />
 
         </section>
         {% block content %}
