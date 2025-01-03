@@ -3,7 +3,6 @@
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
 {% url 'shop' as shop_url %}
-{% url 'booking' as booking_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -54,11 +53,6 @@
                         <a class="nav-link
                           {% if request.path == about_url %}active" aria-current="page{% endif %}"
                             href="{% url 'about' %}">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link
-                          {% if request.path == booking_url %}active" aria-current="page{% endif %}"
-                            href="{% url 'booking' %}">Book with Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link
