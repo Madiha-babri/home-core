@@ -111,13 +111,13 @@ body {
 #welcome-area {
     padding: 30px 20px;
     text-align: center;
-    background-color: #0dd3da;
+    background-color: rgba(153, 157, 158, 0.4);
 }
 
 #welcome-area h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #132B67;
+    color: #9b42e4;
 }
 
 #welcome-area p {
