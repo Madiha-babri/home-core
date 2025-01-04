@@ -2,6 +2,7 @@
 
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
+{% url 'create_booking' as bookings_url %}
 {% url 'gallery' as gallery_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
@@ -50,11 +51,15 @@
                             href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link {% if request.path == booking_url %}active" aria-current="page{% endif %}"
+                            href="{% url 'booking' %}">Bookings</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link
                           {% if request.path == about_url %}active" aria-current="page{% endif %}"
                             href="{% url 'about' %}">About</a>
-                    </li>
-                    <li class="nav-item">
+                    </li>lkd
+                   9 <li class="nav-item">
                         <a class="nav-link
                           {% if request.path == gallery_url %}active" aria-current="page{% endif %}"
                             href="{% url 'gallery' %}">Renovate by Inspiration</a>

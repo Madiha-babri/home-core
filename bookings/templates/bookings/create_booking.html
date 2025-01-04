@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="appointment-container">
+    <h1 class="appointment-title">Book an Appointment</h1>
+    <h1>Create a Booking</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Booking</button>
+    </form>
+</div>
+{% endblock %}
+{% block copyright %}
+Copyright 2023 Madiha Babri
+{% endblock %}
