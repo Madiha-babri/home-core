@@ -7,3 +7,7 @@ from django_summernote.admin import SummernoteModelAdmin
 class GalleryAdmin(SummernoteModelAdmin):
 
     summernote_fields = ('content',)
+
+
+     
+    
