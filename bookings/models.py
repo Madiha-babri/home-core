@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 from django.contrib.auth.models import User
 
 # Create your models here.
@@ -11,7 +12,7 @@ class Booking(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateTimeField()
-    address = models.CharField(max_length=255)
+    location = models.CharField(max_length=255)
     design_style = models.CharField(max_length=100, blank=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='PENDING')
     notes = models.TextField(blank=True)

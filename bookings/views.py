@@ -8,7 +8,7 @@ from .forms import BookingForm
 class CreateBookingView(CreateView):
     model = Booking
     template_name = "bookings/booking.html"
-    fields = ['user', 'date', 'address', 'design_style', 'notes']
+    fields = ['user', 'date', 'location', 'design_style', 'notes']
 
 
 def create_booking(request):
