@@ -1,8 +1,11 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render,  get_object_or_404, redirect
 from django.views.generic.edit import CreateView
 from .models import Booking
 from .forms import BookingForm
+from django.contrib.auth.decorators import login_required
+from django.utils.timezone import now
+from django.contrib import messages
+
 
 # Create your views here.
 class CreateBookingView(CreateView):
@@ -11,16 +14,22 @@ class CreateBookingView(CreateView):
     fields = ['user', 'date', 'location', 'design_style', 'notes']
 
 
-def create_booking(request):
-    template_name = "bookings/create_booking.html"
+def book_appointment(request):
+    template_name = "bookings/booking.html"
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('booking_list')
+            booking = form.save(commit=False)
+            appointment.status = 'Pending'  # Set the default status to 'Pending'
+            booking.save()
+            return redirect('booking_confirmation')
     else:
         form = BookingForm()
-    return render(request, 'bookings/create_booking.html', {'form': form})
+    return render(request, 'bookings/booking.html', {'form': form})
+
+    # Confirmation view
+def booking_confirmation(request):
+    return render(request, 'bookings/booking_confirmation.html')
 
 
 # View to list all bookings
@@ -36,3 +45,57 @@ def update_booking(request, booking_id):
         booking.save()
         return redirect('booking_list')
     return render(request, 'bookings/update_booking.html', {'booking': booking})
+
+
+# Appointment Cancellation View
+@login_required
+def cancel_appointment(request, appointment_id):
+    appointment = get_object_or_404(Appointment, id=appointment_id)
+
+    # Check if the user is either the patient or the specialist linked to the appointment
+    if request.method == 'POST':
+        if request.user == appointment.patient.user or request.user == appointment.specialist.user:
+            appointment.status = 'Cancelled'
+            appointment.save()
+            messages.success(request, 'The appointment has been successfully canceled.')
+        else:
+            messages.error(request, 'You do not have permission to cancel this appointment.')
+
+        # Redirect based on user type (patient or specialist)
+        if request.user.groups.filter(name='Patient').exists():
+            return redirect('patient_appointments')
+        elif request.user.groups.filter(name='Specialist').exists():
+            return redirect('specialist_appointments')
+
+        return redirect('home')
+
+    # Render the confirmation page if it's not a POST request
+    return render(request, 'appointments/confirm_cancellation.html', {'appointment': appointment})
+
+
+# Appointment Cancellation Confirmation View
+@login_required
+def confirm_cancel_appointment(request, appointment_id):
+    appointment = get_object_or_404(Appointment, id=appointment_id)
+
+    # Check if the user is either the patient or the specialist linked to the appointment
+    if request.user == appointment.patient.user or request.user == appointment.specialist.user:
+        if request.method == 'POST':  # User confirmed the cancellation
+            appointment.status = 'Cancelled'
+            appointment.save()
+            messages.success(request, 'The appointment has been successfully canceled.')
+            
+            # Redirect based on user type (patient or specialist)
+            if request.user.groups.filter(name='Patient').exists():
+                return redirect('patient_appointments')
+            elif request.user.groups.filter(name='Specialist').exists():
+                return redirect('specialist_appointments')
+        else:  # GET request, show confirmation page
+            is_patient = request.user.groups.filter(name='Patient').exists()
+            return render(request, 'appointments/confirm_cancellation.html', {
+                'appointment': appointment,
+                'is_patient': is_patient,
+            })
+    else:
+        messages.error(request, 'You do not have permission to cancel this appointment.')
+        return redirect('home')
