@@ -332,3 +332,25 @@ body {
 .submit-btn:hover {
     background-color: #138496;
 }
+
+/* Footer socials styling */
+#socials {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    margin-bottom: -8px;
+}
+
+#socials li {
+    list-style-type: none;
+}
+
+#socials li a {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#socials li a:hover {
+    color: #132B67;
+}
