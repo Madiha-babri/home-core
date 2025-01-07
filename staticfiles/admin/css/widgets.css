@@ -25,7 +25,7 @@
     border-radius: 4px 4px 0 0;
 }
 
-.selector-chosen .list-footer-display {
+.selector-chosen {
     border: 1px solid var(--border-color);
     border-top: none;
     border-radius: 0 0 4px 4px;

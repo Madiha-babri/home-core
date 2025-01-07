@@ -9,10 +9,14 @@ body {
     color: #6e0fbd;
 }
 
-
+/* Navbar styling */
 .thin-gold {
     font-weight: 900;
     color: goldenrod;
+}
+
+.navbar {
+    background-color: rgba(176, 175, 177, 0.849)
 }
 
 .navbar-text {
@@ -109,10 +113,11 @@ body {
  /* Welcome Area Styles */
 
 #welcome-area {
-    
+    border: 2px solid #3a115c;
     padding: 30px 20px;
     text-align: center;
-    background-color: rgba(153, 157, 158, 0.4);
+    background-size: cover; 
+    background-color: rgba(176, 175, 177, 0.849)
 }
 
 #welcome-area h2 {
@@ -333,24 +338,6 @@ body {
     background-color: #138496;
 }
 
-/* Footer socials styling */
-#socials {
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1rem 0;
-    margin-bottom: -8px;
-}
-
-#socials li {
-    list-style-type: none;
-}
-
-#socials li a {
-    color: #fff;
-    font-size: 1.5rem;
-}
-
-#socials li a:hover {
-    color: #132B67;
-}
+.footer {
+    background-color: rgba(176, 175, 177, 0.849)
+ }

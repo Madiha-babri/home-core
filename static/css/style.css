@@ -9,10 +9,13 @@ body {
     color: #9b42e4;
 }
 
-
+/* Navbar styling */
 .thin-gold {
     font-weight: 900;
     color: goldenrod;
+}
+.navbar {
+    background-color: rgba(176, 175, 177, 0.849)
 }
 
 .navbar-text {
@@ -109,10 +112,11 @@ body {
   /* Welcome Area Styles */
 
 #welcome-area {
-    
+    border: 2px solid #3a115c;
     padding: 30px 20px;
     text-align: center;
-    background-color: rgba(153, 157, 158, 0.4);
+    background-size: cover;
+    background-color: rgba(176, 175, 177, 0.849)
 }
 
 #welcome-area h2 {
@@ -205,7 +209,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #6e0fbd;
+    color: #E84610;
 }
 
 .post-title {
@@ -336,6 +340,9 @@ body {
 }
 
 /* Footer socials styling */
+.footer {
+   background-color: rgba(176, 175, 177, 0.849)
+}
 #socials {
     text-align: center;
     display: flex;
@@ -349,7 +356,7 @@ body {
 }
 
 #socials li a {
-    color: #fff;
+    color: #bf13f3;
     font-size: 1.5rem;
 }
 
