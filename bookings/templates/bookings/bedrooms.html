@@ -3,7 +3,33 @@
 
 {% block content %}
 <div>
-    <div class="title-container">
-        <h1 class="entry-title">Bedrooms</h1>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">BEDROOMS</h1>
 
+        <!-- Bootstrap Grid Layout -->
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4"> <!-- Use 3 cards per row on medium and larger screens -->
+                    <div class="card">
+                        <img src="{% static 'images/room2.jpg' %}" alt="picture of room">
+
+                        <h3>Design 1.1</h3>
+                     <div class="card">
+                        <img src="{% static 'images/room3.jpg' %}" alt="picture of room">
+
+                        <h3>Design 1.2</h3>
+                    <div class="card">
+                        <img src="{% static 'images/room4.jpg' %}" alt="picture of room">
+
+                        <h3>Design 1.3</h3>
+                    </div>
+                    </div>
+                    </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ room.title }}</h5>
+                            <p class="card-text">{{ room.description }}</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
 {% endblock content %}
