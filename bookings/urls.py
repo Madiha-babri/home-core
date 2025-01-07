@@ -8,7 +8,7 @@ urlpatterns = [
     path('list/', views.booking_list, name='booking_list'),
     path('update/<int:booking_id>/', views.update_booking, name='update_booking'),
     path('', views.bedrooms, name='bedrooms'),  # The empty string will map to the bedrooms view
-    path('', views.kitchen, name='kitchen'),
-    path('', views.washroom, name='washroom'),
-    path('', views.livingrooms, name='livingrooms'),
+    path('kitchen/', views.kitchen, name='kitchen'),
+    path('washroom/', views.washroom, name='washroom'),
+    path('livingrooms', views.livingrooms, name='livingrooms'),
 ]
