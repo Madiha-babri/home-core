@@ -37,7 +37,7 @@
                     <h3>Step 3</h3>
                     <p>Book an appointment with one of our Consultants online or in person for more design ideas,
                         innovations or renovate your home according to your personality, mood or psychology.</p>
-                    <a href="book_appointment" class="btn btn-primary" target="_blank">Book Now!</a>
+                    <a href="{% url 'book_appointment' %}" class="btn btn-primary" target="_blank">Book Now!</a>
                 </div>
             </div>
         </div>
@@ -57,9 +57,10 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                                    alt="placeholder image">
+                                  alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}"
+                                  alt="{{ post.title }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>

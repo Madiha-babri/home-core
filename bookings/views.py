@@ -5,7 +5,7 @@ from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
 from django.utils.timezone import now
 from django.contrib import messages
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy     # for showing appointment confirmation
 
 # Create your views here.
 class CreateBookingView(CreateView):
