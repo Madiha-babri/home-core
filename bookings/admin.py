@@ -5,7 +5,7 @@ from .models import Booking
 class BookingAdmin(admin.ModelAdmin):
     list_display = ['user', 'date', 'location', 'status']
     list_filter = ['status', 'date']
-    search_fields = ['user__username', 'address']
+    search_fields = ['user__username', 'location']
     ordering = ['date']
 
 admin.site.register(Booking, BookingAdmin)

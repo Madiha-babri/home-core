@@ -12,7 +12,7 @@ class CreateBookingView(CreateView):
     model = Booking
     template_name = "bookings/booking.html"
     fields = ['user', 'date', 'location', 'design_style', 'notes']
-    success_url = reverse_lazy('appointment_confirmation')
+    success_url = reverse_lazy('booking_list')
 
 def book_appointment(request):
     template_name = "bookings/booking.html"
@@ -38,67 +38,26 @@ def booking_list(request):
     return render(request, 'bookings/booking_list.html', {'bookings': bookings})
 
 # View to update the status of a booking
-def update_booking(request, booking_id):
-    booking = Booking.objects.get(id=booking_id)
+def update_booking(request, pk):
+    booking = get_object_or_404(Booking, pk=pk)
     if request.method == 'POST':
-        booking.status = request.POST.get('status')
-        booking.save()
-        return redirect('booking_list')
-    return render(request, 'bookings/update_booking.html', {'booking': booking})
-
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('booking_list')
+    else:
+        form = BookingForm(instance=booking)
+    return render(request, 'update_booking.html', {'form': form})
 
 # Appointment Cancellation View
-@login_required
-def cancel_appointment(request, appointment_id):
-    appointment = get_object_or_404(Appointment, id=appointment_id)
-
-    # Check if the user is either the patient or the specialist linked to the appointment
+def delete_booking(request, pk):
+    booking = get_object_or_404(Booking, pk=pk)
     if request.method == 'POST':
-        if request.user == appointment.patient.user or request.user == appointment.specialist.user:
-            appointment.status = 'Cancelled'
-            appointment.save()
-            messages.success(request, 'The appointment has been successfully canceled.')
-        else:
-            messages.error(request, 'You do not have permission to cancel this appointment.')
-
-        # Redirect based on user type (patient or specialist)
-        if request.user.groups.filter(name='Patient').exists():
-            return redirect('patient_appointments')
-        elif request.user.groups.filter(name='Specialist').exists():
-            return redirect('specialist_appointments')
-
-        return redirect('home')
-
-    # Render the confirmation page if it's not a POST request
-    return render(request, 'appointments/confirm_cancellation.html', {'appointment': appointment})
+        booking.delete()
+        return redirect('booking_list')
+    return render(request, 'confirm_delete.html', {'booking': booking})
 
 
-# Appointment Cancellation Confirmation View
-@login_required
-def confirm_cancel_appointment(request, appointment_id):
-    appointment = get_object_or_404(Appointment, id=appointment_id)
-
-    # Check if the user is either the patient or the specialist linked to the appointment
-    if request.user == appointment.patient.user or request.user == appointment.specialist.user:
-        if request.method == 'POST':  # User confirmed the cancellation
-            appointment.status = 'Cancelled'
-            appointment.save()
-            messages.success(request, 'The appointment has been successfully canceled.')
-            
-            # Redirect based on user type (patient or specialist)
-            if request.user.groups.filter(name='Patient').exists():
-                return redirect('patient_appointments')
-            elif request.user.groups.filter(name='Specialist').exists():
-                return redirect('specialist_appointments')
-        else:  # GET request, show confirmation page
-            is_patient = request.user.groups.filter(name='Patient').exists()
-            return render(request, 'appointments/confirm_cancellation.html', {
-                'appointment': appointment,
-                'is_patient': is_patient,
-            })
-    else:
-        messages.error(request, 'You do not have permission to cancel this appointment.')
-        return redirect('home')
 
 def bedrooms(request):
     return render(request, 'bookings/bedrooms.html')

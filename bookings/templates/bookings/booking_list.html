@@ -9,7 +9,7 @@
     <tr>
         <th>User</th>
         <th>Date</th>
-        <th>Address</th>
+        <th>Location</th>
         <th>Status</th>
         <th>Actions</th>
     </tr>
@@ -17,7 +17,7 @@
     <tr>
         <td>{{ booking.user.username }}</td>
         <td>{{ booking.date }}</td>
-        <td>{{ booking.address }}</td>
+        <td>{{ booking.location }}</td>
         <td>{{ booking.status }}</td>
         <td>
             <a href="{% url 'update_booking' booking.id %}">Update Status</a>
