@@ -102,3 +102,13 @@ def confirm_cancel_appointment(request, appointment_id):
 
 def bedrooms(request):
     return render(request, 'bookings/bedrooms.html')
+
+def washroom(request):
+    return render(request, 'bookings/washroom.html')
+
+def kitchen(request):
+    return render(request, 'bookings/kitchen.html')
+
+def livingrooms(request):
+    return render(request, 'bookings/livingrooms.html')
+
