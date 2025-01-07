@@ -5,14 +5,14 @@ from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
 from django.utils.timezone import now
 from django.contrib import messages
-
+from django.urls import reverse_lazy
 
 # Create your views here.
 class CreateBookingView(CreateView):
     model = Booking
     template_name = "bookings/booking.html"
     fields = ['user', 'date', 'location', 'design_style', 'notes']
-
+    success_url = reverse_lazy('appointment_confirmation')
 
 def book_appointment(request):
     template_name = "bookings/booking.html"
