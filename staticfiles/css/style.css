@@ -342,11 +342,11 @@ body {
     background-color: rgba(176, 175, 177, 0.849)
  }
 
-.card {
+.card-bed {
     transition: transform 0.3s ease; /* Smooth zoom effect */
 }
 
-.card:hover {
+.card-bed:hover {
     transform: scale(1.05); /* Zoom effect on hover */
 }
 
