@@ -99,3 +99,6 @@ def confirm_cancel_appointment(request, appointment_id):
     else:
         messages.error(request, 'You do not have permission to cancel this appointment.')
         return redirect('home')
+
+def bedrooms(request):
+    return render(request, 'bookings/bedrooms.html')

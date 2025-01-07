@@ -15,30 +15,20 @@
             on any of the links below and then scroll down to the booking section to book consultancy/advice for how to
             decorate.</p>
 
-            <div class="faq-container">
-                <!-- FAQ 1 -->
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">What is HealMate?</button>
-                    <div class="faq-answer">
-                        <p>HealMate is an online platform that connects patients with trusted healthcare specialists, allowing you to easily search, book, and consult with medical professionals online.</p>
-                    </div>
-                </div>
-        
-                <!-- FAQ 2 -->
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">How do I book an appointment?</button>
-                    <div class="faq-answer">
-                        <p>You can book an appointment by searching for a specialist, selecting their profile, and viewing their availability. Once you find a suitable time, you can book directly through HealMate.</p>
-                    </div>
-                </div>
-        
-                <!-- FAQ 3 -->
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">Are consultations online or in-person?</button>
-                    <div class="faq-answer">
-                        <p>HealMate offers both online and in-person consultations, depending on the specialist's availability. You can choose the type of appointment during the booking process.</p>
-                    </div>
-                </div>
+        <h5 class="card-title"></h5>
+        <a href="{% url 'bedrooms' %}" class="btn btn-primary" target="_blank">Bedrooms</a>
+        <div>
+            <div class="title-container">
+                <h1 class="entry-title">1. Bedrooms</h1>
+                <div id="photos">
+                    <span>
+                    <img src="{% static 'images/Pinkwashroom.webp' %}" alt="placeholder image">
+                    <h3>Design 1.1</h3>
+                </span>
+                <span>
+                    <img src="{% static 'images/aboutpagepic.jpg' %}" alt="placeholder image">
+                    <h3>Design 1.2</h3>
+                </span>
 
                 </div>
             </div>
@@ -95,6 +85,3 @@
         </div>
     </div>
     {% endblock %}
-    {% block extra_js %}
-    <script src="{% static 'js/booking.js' %}"></script>
-{% endblock %}

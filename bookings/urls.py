@@ -7,4 +7,5 @@ urlpatterns = [
     path('confirmation/', views.booking_confirmation, name='appointment_confirmation'),
     path('list/', views.booking_list, name='booking_list'),
     path('update/<int:booking_id>/', views.update_booking, name='update_booking'),
+    path('', views.bedrooms, name='bedrooms'),  # The empty string will map to the homepage view
 ]
