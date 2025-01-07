@@ -342,14 +342,6 @@ body {
     background-color: rgba(176, 175, 177, 0.849)
  }
 
- .image-container {
-
-    width: 100%; /* Set the width of the box */
-    height: 100%; /* Set the height of the box */
-    overflow: hidden; /* Hide anything that goes beyond the container */
-    position: relative; /* Optional, depending on other styles */
-    }
-
 .card-bed {
     width: 100%; /* Stretch the image to fill the width */
     height: 100%; /* Stretch the image to fill the height */
