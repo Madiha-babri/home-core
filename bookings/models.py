@@ -10,12 +10,12 @@ class Booking(models.Model):
         ('CANCELLED', 'Cancelled'),
     ]
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)       # only registered user can book appointment
     date = models.DateTimeField()
     location = models.CharField(max_length=255)
-    design_style = models.CharField(max_length=100, blank=True)
+    design_style = models.CharField(max_length=100, blank=True)    # user can choose any design for booking
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='PENDING')
-    notes = models.TextField(blank=True)
+    notes = models.TextField(blank=True)                           # user can enter additional notes
 
     def __str__(self):
         return f"Booking for {self.user.username} on {self.date}"

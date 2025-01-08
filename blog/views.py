@@ -7,7 +7,7 @@ from .forms import CommentForm
 
 # Create your views here.
 
-
+# for post view
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "blog/index.html"
@@ -56,7 +56,7 @@ def post_detail(request, slug):
         },
     )
 
-
+# for editting comment
 def comment_edit(request, slug, comment_id):
     """
     view to edit comments
@@ -80,7 +80,7 @@ def comment_edit(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-
+# for deleting comment
 def comment_delete(request, slug, comment_id):
     """
     view to delete comment

@@ -13,7 +13,7 @@ class CreateBookingView(CreateView):
     template_name = "bookings/booking.html"
     fields = ['user', 'date', 'location', 'design_style', 'notes']
     success_url = reverse_lazy('booking_list')
-
+# booking view
 def book_appointment(request):
     template_name = "bookings/booking.html"
     if request.method == 'POST':
@@ -27,7 +27,7 @@ def book_appointment(request):
         form = BookingForm()
     return render(request, 'bookings/booking.html', {'form': form})
 
-    # Confirmation view
+ # Confirmation view
 def booking_confirmation(request):
     return render(request, 'bookings/booking_confirmation.html')
 
@@ -58,16 +58,19 @@ def delete_booking(request, pk):
     return render(request, 'confirm_delete.html', {'booking': booking})
 
 
-
+# bedrooms options view
 def bedrooms(request):
     return render(request, 'bookings/bedrooms.html')
 
+# washroom options view
 def washroom(request):
     return render(request, 'bookings/washroom.html')
 
+# kitchen options view
 def kitchen(request):
     return render(request, 'bookings/kitchen.html')
 
+# livingroom options view
 def livingrooms(request):
     return render(request, 'bookings/livingrooms.html')
 
