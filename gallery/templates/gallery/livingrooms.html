@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">LIVINGROOM</h1>
+
+        <!-- Bootstrap Grid Layout -->
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4"> <!-- Use 3 cards per row on medium and larger screens -->
+                    <div class="card-bed">
+                        <img src="{% static 'images/livingroom.jpg' %}" alt="picture of livingroom1">
+
+                        <h3>Design 4.1</h3>
+                     <div class="card-bed">
+                        <img src="{% static 'images/livingroom2.jpg' %}" alt="picture of livingroom2">
+
+                        <h3>Design 4.2</h3>
+                    <div class="card-bed">
+                        <img src="{% static 'images/livingroom6.jpg' %}" alt="picture of livingroom3">
+
+                        <h3>Design 4.3</h3>
+                    </div>
+                    </div>
+                    </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ room.title }}</h5>
+                            <p class="card-text">{{ room.description }}</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+{% endblock content %}

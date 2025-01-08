@@ -7,13 +7,16 @@ from django.utils.timezone import now
 from django.contrib import messages
 from django.urls import reverse_lazy     # for showing appointment confirmation
 
-# Create your views here.
+
+# booking view
+
 class CreateBookingView(CreateView):
     model = Booking
     template_name = "bookings/booking.html"
     fields = ['user', 'date', 'location', 'design_style', 'notes']
     success_url = reverse_lazy('booking_list')
-# booking view
+    
+@login_required
 def book_appointment(request):
     template_name = "bookings/booking.html"
     if request.method == 'POST':
