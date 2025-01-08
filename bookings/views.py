@@ -1,5 +1,4 @@
 from django.shortcuts import render,  get_object_or_404, redirect
-from django.views.generic.edit import CreateView
 from .models import Booking
 from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
@@ -12,15 +11,6 @@ from django.urls import reverse_lazy     # for showing appointment confirmation
 
 # booking view
 
-class CreateBookingView(LoginRequiredMixin, CreateView):
-    model = Booking
-    template_name = "bookings/booking.html"
-    fields = ['user', 'date', 'location', 'design_style', 'notes']
-    success_url = reverse_lazy('booking_list')
-
-    def get_queryset(self):
-        return Booking.objects.filter(user=self.request.user)
-    
 @login_required
 def book_appointment(request):
     template_name = "bookings/booking.html"
@@ -28,11 +18,24 @@ def book_appointment(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             booking = form.save(commit=False)
+            bookings.user = request.user
             appointment.status = 'Pending'  # Set the default status to 'Pending'
             booking.save()
-            return redirect('booking_confirmation')
+            messages.add_message(
+                request,
+                messages.SUCCESS,
+                "Booking submitted! It will turn from"
+                + " colored to black when confirmed."
+            )
+            return HttpResponseRedirect(reverse("bookings"))
     else:
         form = BookingForm()
+
+    bookings = (
+        Booking.objects.all()
+        .filter(username=request.user)
+        .order_by("date_of_booking")
+    )
     return render(request, 'bookings/booking.html', {'form': form})
 
  # Confirmation view

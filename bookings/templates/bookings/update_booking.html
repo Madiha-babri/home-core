@@ -1,17 +1,19 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 {% load crispy_forms_tags %}
 
+{% block title %}Edit Booking{% endblock %} 
+
 {% block content %}
-<h1>Update Booking Status</h1>
-<form method="post">
-    {% csrf_token %}
-    <label for="status">Status:</label>
-    <select name="status">
-        <option value="PENDING" {% if booking.status == 'PENDING' %}selected{% endif %}>Pending</option>
-        <option value="CONFIRMED" {% if booking.status == 'CONFIRMED' %}selected{% endif %}>Confirmed</option>
-        <option value="CANCELLED" {% if booking.status == 'CANCELLED' %}selected{% endif %}>Cancelled</option>
-    </select>
-    <button type="submit">Update Status</button>
-</form>
+<div class="container edit-form">
+    <form method="POST" enctype="multipart/form-data" class="p-2 form">
+        <h3 class="text-center">Edit Booking</h3>
+        {% csrf_token %}
+        {{ form.media }} 
+        {{ form|crispy }}
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary mt-2">Update</button>
+        </div>
+    </form>
+</div>
 {% endblock %}
