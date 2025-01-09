@@ -3,11 +3,35 @@ from django.forms.widgets import DateInput
 from django.core.exceptions import ValidationError
 from datetime import datetime, date
 from .models import Booking
-from django.forms import ModelForm
 
-class BookingForm(ModelForm):
+
+class BookingForm(forms.ModelForm):
+    """
+    Form for creating and updating booking instances.
+
+    **Fields**
+
+        appointment_date: Date of the reservation.
+        Design_style: Type of design to be selected
+      
+
+    **Labels**
+
+        appointment_date: "Date"
+        design_style: "Design"
+        email: "Email"
+    """
+
     class Meta:
         model = Booking
-        fields = ['date_of_booking', 'location', 'design_style', 'status', 'notes']
+        fields = ("appointment_date", "design_style", "email", "status")
+        widgets = {
+            "appointment_date": DateInput(attrs={"type": "date"}),
+        }
 
-    date_of_booking = forms.DateTimeField(widget=forms.DateTimeInput(attrs={'type': 'datetime-local'}))
+        labels = {
+            "appointment_date": "Date",
+            "design_style": "Design",
+            "email": "Email",
+            "status": "Status",
+        }

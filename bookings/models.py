@@ -1,25 +1,18 @@
 from django.db import models
-import datetime
-from django.utils import timezone
 from django.contrib.auth.models import User
-
+import datetime
 
 class Booking(models.Model):
-    STATUS_CHOICES = [
-        ('PENDING', 'Pending'),
-        ('CONFIRMED', 'Confirmed'),
-        ('CANCELLED', 'Cancelled'),
-    ]
-
-    username = models.CharField(max_length=255, default="default_user")
-    date_of_booking = models.DateTimeField(default=timezone.now)
-    location = models.CharField(max_length=255)
-    design_style = models.CharField(max_length=100, blank=True)    # user can choose any design for booking
-    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='PENDING')
-    notes = models.TextField(blank=True)                           # user can enter additional notes
-
+    owner = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="owner_booking")
+    email = models.EmailField()
+    appointment_date = models.DateTimeField()
+    design_style = models.TextField()
+    status = models.CharField(max_length=20, choices=[('pending', 'Pending'), ('confirmed', 'Confirmed')], default='pending')
+    
     def __str__(self):
-        return f"Booking for {self.username} on {self.date_of_booking}"
+        return f'Booking for {self.owner} on {self.appointment_date}'
 
     class Meta:
-        ordering = ["date_of_booking"]
+        ordering = ['appointment_date']
+

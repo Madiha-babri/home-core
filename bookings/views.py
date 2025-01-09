@@ -9,7 +9,6 @@ from django.utils.timezone import now
 from django.contrib import messages
 from django.urls import reverse_lazy     # for showing appointment confirmation
 
-
 # booking view
     
 @login_required
@@ -51,7 +50,6 @@ class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     template_name = "bookings/update_booking.html"
     form_class = BookingForm
     success_url = "/bookings/"
-
 
     def form_valid(self, form):
         form.instance.confirmed = False
@@ -100,3 +98,4 @@ class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         booking = self.get_object()
         return (self.request.user == booking.username or
                 self.request.user.is_superuser)
+
