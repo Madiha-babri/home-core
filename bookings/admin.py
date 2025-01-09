@@ -12,6 +12,7 @@ class BookingAdmin(admin.ModelAdmin):
         "email",
         "appointment_date",
         "design_style",
+        "notes",
     )
     list_filter = ("appointment_date", "owner")
     search_fields = ["owner", "design_style"]
