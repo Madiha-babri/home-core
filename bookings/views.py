@@ -18,7 +18,7 @@ def book_appointment(request):
         booking_form = BookingForm(data=request.POST)
         if booking_form.is_valid():
             bookings = booking_form.save(commit=False)
-            bookings.username = request.user
+            bookings.owner = request.user
             bookings.save()
             messages.add_message(
                 request,
@@ -32,8 +32,8 @@ def book_appointment(request):
 
     bookings = (
         Booking.objects.all()
-        .filter(username=request.user)
-        .order_by("date_of_booking")
+        .filter(owner=request.user)
+        .order_by("appointment_date")
     )
 
     return render(request, 
@@ -70,7 +70,7 @@ class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
             False otherwise.
         """
         booking = self.get_object()
-        return (self.request.user == booking.username or
+        return (self.request.user == booking.owner or
                 self.request.user.is_superuser)
 
 # Appointment Cancellation View
@@ -96,6 +96,6 @@ class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
             False otherwise.
         """
         booking = self.get_object()
-        return (self.request.user == booking.username or
+        return (self.request.user == booking.owner or
                 self.request.user.is_superuser)
 
