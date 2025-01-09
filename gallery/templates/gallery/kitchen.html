@@ -2,24 +2,24 @@
 {% load static %}
 
 {% block content %}
-    <div class="container-">
-        <h1>Kitchen Designs</h1>
-        <div class="row">
-            <!-- First Image -->
-            <div class="col-12 col-md-4 mb-4"><img src="{% static 'images/kitchen.jpg' %}" width="300" height="auto"
-                    alt="picture of kitchen 1">
-                <h3>Design 2.1</h3>
-            </div>
-            <!-- Second Image -->
-            <div class="col-12 col-md-4 mb-4"><img src="{% static 'images/kitchen2.jpg' %}" width="300" height="auto"
-                    alt="picture of kitchen 2">
-                <h3>Design 2.2</h3>
-            </div>
-            <!-- Third Image -->
-            <div class="col-12 col-md-4 mb-4"><img src="{% static 'images/kitchen3.jpg' %}" width="300" height="auto"
-                    alt="picture of kitchen 3">
-                <h3>Design 2.3</h3>
-            </div>
+<div class="container-image">
+    <h1>Kitchen Designs</h1>
+    <div class="row">
+        <!-- First Image -->
+        <div class="col-sm-12 col-md-6 col-lg-4"><img src="{% static 'images/kitchen.jpg' %}" width="400" height="400"
+                alt="picture of kitchen 1">
+            <h3>Design 2.1</h3>
+        </div>
+        <!-- Second Image -->
+        <div class="col-sm-12 col-md-6 col-lg-4"><img src="{% static 'images/kitchen2.jpg' %}" width="400" height="400"
+                alt="picture of kitchen 2">
+            <h3>Design 2.2</h3>
+        </div>
+        <!-- Third Image -->
+        <div class="col-sm-12 col-md-6 col-lg-4"><img src="{% static 'images/kitchen3.jpg' %}" width="400" height="400"
+                alt="picture of kitchen 3">
+            <h3>Design 2.3</h3>
         </div>
     </div>
+</div>
 {% endblock content %}

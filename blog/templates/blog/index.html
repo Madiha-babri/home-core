@@ -2,45 +2,49 @@
 {% load static %}
 
 {% block content %}
-
 <section>
-    <div> 
-    <div id="welcome-area">
-        <h1>Welcome to Lets Renovate - Home Decorating Blog</h1>
-        <H2>Where Design Meets Well-Being</H2>
-
-        <p>
-            A home design website focused on psychology and home decoration
-            explores how our living environments influence mental well-being and behavior.
-            It provides expert advice on creating spaces that promote relaxation,
-            productivity, and emotional balance.
-            By combining design principles with psychological insights,
-            the website helps users curate their homes to align with their emotional needs,
-            offering tips on color psychology, lighting, layout,
-            and decor choices that enhance mood and cognitive function.
-        </p>
-        <h3> How It Works </h3>
-        <div class="steps">
-            <div class="step">
-                <h3>Step 1</h3>
-                <p>Read blog from our top bloggers about home renovation, home designing and pyschological factors of
-                    colors
-                    selection.</p>
-                <a href="{% url 'home' %}" class="btn btn-primary" target="_blank">Check Blogs!</a>
-                <div class="step">
-                    <h3>Step 2</h3>
-                    <p>Go through our Renovate by Inspiration page and select designs for different sections of
-                        home.</p>
-                    <a href="{% url 'gallery' %}" class="btn btn-primary" target="_blank">Let's get Inspired</a>
-                </div>
-                <div class="step">
-                    <h3>Step 3</h3>
-                    <p>Book an appointment with one of our Consultants online or in person for more design ideas,
-                        innovations or renovate your home according to your personality, mood or psychology.</p>
-                    <p>Book Now!</p>
-                </div>
-            </div>
-        </div>
+    <div class="container mt-5">
+                <div class="card shadow-sm">
+                    <div class="card-header text-center" id="welcome-area">
+                        <h1>Welcome to Lets Renovate - Home Decorating Blog</h1>
+                        <H2><emp>Where Design Meets Well-Being</emp></H2>
+                        <p>
+                            A home design website focused on psychology and home decoration
+                            explores how our living environments influence mental well-being and behavior.
+                            It provides expert advice on creating spaces that promote relaxation,
+                            productivity, and emotional balance.
+                            By combining design principles with psychological insights,
+                            the website helps users curate their homes to align with their emotional needs,
+                            offering tips on color psychology, lighting, layout,
+                            and decor choices that enhance mood and cognitive function.
+                        </p>
+                        <h3> How It Works </h3>
+                        <div class="steps">
+                            <div class="step">
+                                <h3>Step 1</h3>
+                                <p>Read blog from our top bloggers about home renovation, home designing and
+                                    pyschological factors of
+                                    colors
+                                    selection.</p>
+                                <a href="{% url 'home' %}" class="btn btn-primary" target="_blank">Check Blogs!</a>
+                                <div class="step">
+                                    <h3>Step 2</h3>
+                                    <p>Go through our Renovate by Inspiration page and select designs for different
+                                        sections of
+                                        home.</p>
+                                    <a href="{% url 'gallery' %}" class="btn btn-primary" target="_blank">Let's get
+                                        Inspired</a>
+                                </div>
+                                <div class="step">
+                                    <h3>Step 3</h3>
+                                    <p>Book an appointment with one of our Consultants online or in person for more
+                                        design ideas,
+                                        innovations or renovate your home according to your personality, mood or
+                                        psychology.</p>
+                                    <p>Book Now!</p>
+                                </div>
+                            </div>
+                        </div>
 </section>
 
 <!-- index.html content starts here -->
@@ -57,10 +61,9 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                                  alt="placeholder image">
+                                    alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}"
-                                  alt="{{ post.title }}">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>

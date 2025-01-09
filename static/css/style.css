@@ -18,6 +18,16 @@ body {
     background-color: rgba(176, 175, 177, 0.849)
 }
 
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: #9b42e4;
+    border: 1px solid #f352f3;
+    border-radius: .25rem;
+    transition: box-shadow .15s ease-in-out;
+}
+
 .navbar-text {
     font-weight: 600;
     color: #6e0fbd;
