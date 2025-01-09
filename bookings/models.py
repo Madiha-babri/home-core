@@ -10,7 +10,6 @@ class Booking(models.Model):
     email = models.EmailField()
     appointment_date = models.DateTimeField()
     design_style = models.TextField(choices=DESIGNS)
-    notes = models.TextField(default="No notes provided")
     confirmed = models.BooleanField(default=False)
     
     def __str__(self):
