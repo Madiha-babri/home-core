@@ -30,6 +30,10 @@ class Post(models.Model):
         
 # for commenting on posts model      
 class Comment (models.Model):
+    """
+    Stores a single comment entry related to :model:`auth.User`
+    and :model:`blog.Post`.
+    """
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name="comments"
     )

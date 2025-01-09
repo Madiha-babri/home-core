@@ -111,10 +111,10 @@
         <p class="text-end m-3">You are not logged in</p>
         {% endif %}
         <!-- for hero section -->
-        <section id="hero-outer">
+        <div id="hero-outer">
             <img src="{% static 'images/hero-imagehomecore.jpg' %}" class="hero-image"
                 alt="Image of a sitting room with sofas" />
-        </section>
+        </div>
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
@@ -122,8 +122,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
-        <footer id="main-footer">
+    <footer class="footer mt-auto py-3 dark-bg" id="main-footer">
             <ul id="socials">
                 <li><a href="http://facebook.com" target="_blank" rel="noopener"
                         aria-label="Visit our Facebook page (Opens Facebook website on a new browser)"><i

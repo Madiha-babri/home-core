@@ -20,6 +20,7 @@ class BookingForm(forms.ModelForm):
         appointment_date: "Date"
         design_style: "Design"
         email: "Email"
+        notes: "Notes"
     """
 
     class Meta:

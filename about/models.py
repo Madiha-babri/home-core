@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 class About(models.Model):
     """
     Stores a single about me text
+    
     """
 
     title = models.CharField(max_length=200)
@@ -20,6 +21,10 @@ class About(models.Model):
         return self.title
 
 class CollaborateRequest(models.Model):
+    """
+    Stores a single collaboration request message
+
+    """
     name = models.CharField(max_length=200)
     email = models.EmailField()
     message = models.TextField()
