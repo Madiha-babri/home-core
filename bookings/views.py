@@ -8,6 +8,7 @@ from django.views.generic import UpdateView, DeleteView
 from django.utils.timezone import now
 from django.contrib import messages
 from django.urls import reverse_lazy     # for showing appointment confirmation
+from django.http import HttpResponseRedirect
 
 # booking view
     
