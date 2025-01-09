@@ -282,6 +282,20 @@ body {
 
 }
 
+/* gallery and pictures styling */
+.container-image {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.specialists-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    height: auto;   
+}
+
 /* Title styling */
 .appointment-title {
     text-align: center;

@@ -2,34 +2,25 @@
 {% load static %}
 
 {% block content %}
-<div>
-    <div class="container my-5">
-        <h1 class="text-center mb-4">BEDROOMS</h1>
-
-        <!-- Bootstrap Grid Layout -->
-        <div class="row">
-            <div class="col-12 col-md-4 mb-4"> <!-- Use 3 cards per row on medium and larger screens -->
-                    <div class="card-bed">
-                        <img src="{% static 'images/room6.jpg' %}" alt="picture of room1">
-
-                        <h3>Design 1.1</h3>
-                     <div class="card-bed">
-                        <img src="{% static 'images/room3.jpg' %}" alt="picture of room2">
-
-                        <h3>Design 1.2</h3>
-                    <div class="card-bed">
-                        <img src="{% static 'images/room4.jpg' %}" alt="picture of room3">
-
-                        <h3>Design 1.3</h3>
-                    </div>
-                    </div>
-                    </div>
-                        <div class="card-body">
-                            <h5 class="card-title">{{ room.title }}</h5>
-                            <p class="card-text">{{ room.description }}</p>
-                        </div>
-                    </div>
-                </div>
+<section id="featured-specialists">
+    <h2>Bedroom Designs</h2>
+    <div class="specialists-list">
+        <div class="specialist-card">
+            <img src="{% static 'images/room6.jpg' %}" width="300" height="auto" alt="picture of room1">
+            <h3>Design 1.1</h3>
+            </a>
+        </div>
+        <div class="specialist-card">
+            <img src="{% static 'images/room3.jpg' %}" width="300" height="auto" alt="picture of room2">
+            <h3>Design 1.2</h3>
+            </a>
+        </div>
+        <div class="specialist-card">
+            <img src="{% static 'images/room4.jpg' %}" width="300" height="auto" alt="picture of room2">
+            <h3>Design 1.3</h3>
+            </a>
         </div>
     </div>
+</section>
+
 {% endblock content %}

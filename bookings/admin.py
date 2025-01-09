@@ -8,14 +8,14 @@ class BookingAdmin(admin.ModelAdmin):
     """Class to view the Bookings in the admin panel"""
 
     list_display = (
-        "owner",
+        "username",
         "email",
         "appointment_date",
         "design_style",
         "notes",
     )
-    list_filter = ("appointment_date", "owner")
-    search_fields = ["owner", "design_style"]
+    list_filter = ("appointment_date", "username")
+    search_fields = ["username", "design_style"]
     actions = ["confirm_booking"]
 
     def confirm_booking(self, request, queryset):

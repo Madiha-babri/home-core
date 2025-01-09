@@ -5,8 +5,8 @@ import datetime
 DESIGNS = (("bedrooms", "Bedroom"), ("washroom", "Washroom"), ("kitchen", "Kitchen"), ("livigroom", "LivingRoom"))
 
 class Booking(models.Model):
-    owner = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="owner_booking")
+    username = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="username_booking")
     email = models.EmailField()
     appointment_date = models.DateTimeField()
     design_style = models.TextField(choices=DESIGNS)
@@ -14,7 +14,7 @@ class Booking(models.Model):
     confirmed = models.BooleanField(default=False)
     
     def __str__(self):
-        return f'Booking for {self.owner} on {self.appointment_date}'
+        return f'Booking for {self.username} on {self.appointment_date}'
 
     class Meta:
         ordering = ['appointment_date']

@@ -5,5 +5,5 @@ live site:
 Github repository, click
 
 # Table of Contents
-
+- [Introduction](#Lets Renovate - Home Decorating Blog)
 .

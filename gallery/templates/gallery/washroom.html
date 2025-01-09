@@ -3,33 +3,27 @@
 
 {% block content %}
 <div>
-    <div class="container my-5">
         <h1 class="text-center mb-4">WASHROOM</h1>
 
         <!-- Bootstrap Grid Layout -->
         <div class="row">
-            <div class="col-12 col-md-4 mb-4"> <!-- Use 3 cards per row on medium and larger screens -->
-                    <div class="card-bed">
-                        <img src="{% static 'images/Pinkwashroom.webp' %}" alt="picture of washroom1">
-
-                        <h3>Design 3.1</h3>
-                     <div class="card-bed">
-                        <img src="{% static 'images/washroom3.jpg' %}" alt="picture of washroom2">
-
-                        <h3>Design 3.2</h3>
-                    <div class="card-bed">
-                        <img src="{% static 'images/washrrom2.jpg' %}" alt="picture of washroom3">
-
-                        <h3>Design 3.3</h3>
-                    </div>
-                    </div>
-                    </div>
-                        <div class="card-body">
-                            <h5 class="card-title">{{ room.title }}</h5>
-                            <p class="card-text">{{ room.description }}</p>
-                        </div>
-                    </div>
+            <div class="col-12 col-md-4 mb-4">
+                <!-- Use 3 cards per row on medium and larger screens -->
+                <div class="card-bed">
+                    <img src="{% static 'images/Pinkwashroom.webp' %}" width="300" height="auto"
+                        alt="picture of washroom1">
+                    <h3>Design 3.1</h3>
                 </div>
+
+                <div class="card-bed">
+                    <img src="{% static 'images/washroom3.jpg' %}" width="300" height="auto" alt="picture of washroom2">
+                    <h3>Design 3.2</h3>
+                </div>
+
+                <div class="card-bed">
+                    <img src="{% static 'images/washrrom2.jpg' %}" width="300" height="auto" alt="picture of washroom3">
+                    <h3>Design 3.3</h3>
+                </div>
+            </div>
         </div>
-    </div>
-{% endblock content %}
+        {% endblock content %}
