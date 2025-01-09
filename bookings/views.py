@@ -100,20 +100,3 @@ class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         booking = self.get_object()
         return (self.request.user == booking.username or
                 self.request.user.is_superuser)
-
-# bedrooms options view
-def bedrooms(request):
-    return render(request, 'bookings/bedrooms.html')
-
-# washroom options view
-def washroom(request):
-    return render(request, 'bookings/washroom.html')
-
-# kitchen options view
-def kitchen(request):
-    return render(request, 'bookings/kitchen.html')
-
-# livingroom options view
-def livingrooms(request):
-    return render(request, 'bookings/livingrooms.html')
-
