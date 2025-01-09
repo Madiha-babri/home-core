@@ -1,36 +1,26 @@
 from django.shortcuts import render,  get_object_or_404, redirect
-from django.views.generic.edit import CreateView
 from .models import Booking
 from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
+from django.views.generic import UpdateView, DeleteView
 from django.utils.timezone import now
 from django.contrib import messages
 from django.urls import reverse_lazy     # for showing appointment confirmation
 
 
 # booking view
-
-class CreateBookingView(LoginRequiredMixin, CreateView):
-    model = Booking
-    template_name = "bookings/booking.html"
-    fields = ['date', 'location', 'design_style', 'notes']
-    success_url = reverse_lazy('booking_list')
-
-    def get_queryset(self):
-        return Booking.objects.filter(user=self.request.user)
     
 @login_required
 def book_appointment(request):
     template_name = "bookings/booking.html"
     if request.method == 'POST':
-        form = BookingForm(request.POST)
-        if form.is_valid():
-            booking = form.save(commit=False)
-            bookings.user = request.user
-            appointment.status = 'Pending'  # Set the default status to 'Pending'
-            booking.save()
+        booking_form = BookingForm(data=request.POST)
+        if booking_form.is_valid():
+            bookings = booking_form.save(commit=False)
+            bookings.username = request.user
+            bookings.save()
             messages.add_message(
                 request,
                 messages.SUCCESS,
@@ -39,53 +29,77 @@ def book_appointment(request):
             )
             return HttpResponseRedirect(reverse("bookings"))
     else:
-        form = BookingForm()
+        booking_form = BookingForm()
 
     bookings = (
         Booking.objects.all()
         .filter(username=request.user)
         .order_by("date_of_booking")
     )
-    return render(request, 'bookings/booking.html', {'form': form})
 
- # Confirmation view
-def booking_confirmation(request):
-    return render(request, 'bookings/booking_confirmation.html')
-
-
-# View to list all bookings
-def booking_list(request):
-    bookings = Booking.objects.filter(user=request.user)
-    return render(request, 'bookings/booking_list.html', {'bookings': bookings})
+    return render(request, 
+        "bookings/booking.html",
+        {
+            "bookings": bookings,
+            "booking_form": booking_form,
+        },
+    )
 
 # View to update the status of a booking
-def user_can_modify_booking(user, booking):
-    if booking.user != user:
-        raise PermissionDenied
-        
-def update_booking(request, pk):
+class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Booking
+    template_name = "bookings/update_booking.html"
+    form_class = BookingForm
+    success_url = "/bookings/"
 
-    queryset = Post.objects.filter(user=request.user)
-    booking = get_object_or_404(Booking, pk=pk)
-    if request.method == 'POST':
-        form = BookingForm(request.POST, instance=booking)
-        if form.is_valid():
-            form.save()
-            return redirect('booking_list')
-    else:
-        form = BookingForm(instance=booking)
-    return render(request, 'update_booking.html', {'form': form})
+
+    def form_valid(self, form):
+        form.instance.confirmed = False
+        messages.success(
+            self.request,
+            "Your booking has been updated!",
+            extra_tags="alert alert-success alert-dismissible",
+        )
+
+        return super().form_valid(form)
+
+    def test_func(self):
+        """
+        Checks if the logged-in user is the owner of the booking.
+
+        Returns:
+            bool: True if the logged in user is the owner of the booking
+            False otherwise.
+        """
+        booking = self.get_object()
+        return (self.request.user == booking.username or
+                self.request.user.is_superuser)
 
 # Appointment Cancellation View
-def delete_booking(request, pk):
+class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Booking
+    success_url = "/bookings/"
 
-    queryset = Post.objects.filter(user=request.user)
-    booking = get_object_or_404(Booking, pk=pk)
-    if request.method == 'POST':
-        booking.delete()
-        return redirect('booking_list')
-    return render(request, 'confirm_delete.html', {'booking': booking})
+    def form_valid(self, form):
+        messages.success(
+            self.request,
+            "Your booking has been deleted successfully!",
+            extra_tags="alert alert-success alert-dismissible",
+        )
 
+        return super().form_valid(form)
+
+    def test_func(self):
+        """
+        Checks if the logged-in user is the owner of the booking.
+
+        Returns:
+            bool: True if the logged in user is the owner of the booking
+            False otherwise.
+        """
+        booking = self.get_object()
+        return (self.request.user == booking.username or
+                self.request.user.is_superuser)
 
 # bedrooms options view
 def bedrooms(request):
