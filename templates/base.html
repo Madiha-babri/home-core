@@ -3,7 +3,6 @@
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
 {% url 'gallery' as gallery_url %}
-{% url 'book_appointment' as bookings_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -61,11 +60,6 @@
                             href="{% url 'gallery' %}">Renovate by Inspiration</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link
-                    {% if request.path == bookings_url %}active" aria-current="page{% endif %}"
-                        href="{% url 'book_appointment' %}">Bookings</a>
-                    </li>
-                    <li class="nav-item">
                         {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}"
@@ -113,7 +107,7 @@
         <!-- for hero section -->
         <div id="hero-outer">
             <img src="{% static 'images/hero-imagehomecore.jpg' %}" class="hero-image"
-                alt="Image of a sitting room with sofas" />
+                alt="Image of a sitting room with sofas">
         </div>
         {% block content %}
         <!-- Content Goes here -->
