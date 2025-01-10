@@ -5,7 +5,7 @@ import datetime
 DESIGNS = (("bedrooms", "Bedroom"), ("washroom", "Washroom"), ("kitchen", "Kitchen"), ("livigroom", "LivingRoom"))
 
 # Create your models here.
-class consultancy(models.Model):
+class Consultancy(models.Model):
 
     username = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="username_booking"
