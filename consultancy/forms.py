@@ -13,7 +13,6 @@ class ConsultancyForm(forms.ModelForm):
 
         date_of_booking: Date of the reservation.
         Design_type: Type of design to be selected
-      
 
     **Labels**
 
@@ -34,3 +33,4 @@ class ConsultancyForm(forms.ModelForm):
             "design_type": "Design",
             "message": "Message",
         }
+        
