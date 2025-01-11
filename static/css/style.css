@@ -94,13 +94,13 @@ body {
     width: 100%;
     overflow: hidden;
     object-fit: cover;
-    /* animating zoom effect on the hero image when loading page */
+/* animating zoom effect on the hero image when loading page */
     animation-name: hero-zoom;
     animation-duration: 5s;
     animation-fill-mode: forwards;
   }
   
-  /* creating a zoom for the hero image */
+/* creating a zoom for the hero image */
   @keyframes hero-zoom {
     from {
       transform: scale(1);
@@ -110,9 +110,6 @@ body {
       transform: scale(1.1);
     }
   }
-
-
- 
 
   /* Welcome Area Styles */
 
@@ -152,8 +149,6 @@ body {
     border-radius: 8px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
-
-
 
 .scale {
     width: 100%;
@@ -301,6 +296,11 @@ body {
     gap: 20px;
     justify-content: center;
     height: auto;   
+}
+
+.about-content {
+    margin-left: 10px;
+    margin-right: auto;
 }
 
 /* Title styling */
