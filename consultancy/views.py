@@ -78,7 +78,7 @@ class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Consultancy
     template_name = "consultancy/update_booking.html"
     form_class = ConsultancyForm
-    success_url = "/consultancy/"
+    success_url = "/consultancy/book_consultancy/"
 
     def form_valid(self, form):
         form.instance.confirmed = False
@@ -128,7 +128,7 @@ class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
 
     model = Consultancy
-    success_url = "/consultancy/"
+    success_url = "/consultancy/book_consultancy/"
 
     def form_valid(self, form):
         messages.success(
