@@ -161,6 +161,7 @@ body {
     text-transform: uppercase;
 }
 
+/* About page styling */
 .about-picture {
     display: flex;
     justify-content: center;  /* Horizontally center */
@@ -204,6 +205,7 @@ body {
     z-index: 100;
 }
 
+/* Posts styling */
 .post-link {
     text-decoration: none;
     color: #445261;
@@ -281,9 +283,10 @@ body {
     background-color: goldenrod;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-
 }
-
+ .booking-item {
+    margin-left: 20px;
+ }
 /* gallery and pictures styling */
 .container-image {
     font-size: 2rem;
@@ -364,24 +367,25 @@ body {
 .footer {
    background-color: rgba(176, 175, 177, 0.849)
 }
-#socials {
+#socials-icon {
     text-align: center;
     display: flex;
     justify-content: space-evenly;
     padding: 1rem 0;
     margin-bottom: -8px;
+    
 }
 
-#socials li {
+#socials-icon li {
     list-style-type: none;
 }
 
-#socials li a {
+#socials-icon li a {
     color: #bf13f3;
     font-size: 1.5rem;
 }
 
-#socials li a:hover {
+#socials-icon li a:hover {
     color: #132B67;
 }
 

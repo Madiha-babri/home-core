@@ -37,6 +37,7 @@
     cursor: pointer;
 }
 .selector-chosen .list-footer-display__clear {
+    
     color: var(--breadcrumbs-fg);
 }
 
