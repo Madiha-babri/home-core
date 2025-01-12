@@ -111,3 +111,9 @@ The ERD shown below illustrates the relationships between the users, consultancy
 The ERD also demonstrates the platform's role-based structure. In the diagram below it can be seen that User has a relationship to Post, Comment and Booking. Comment has a relationship with both User and Post.
 
 ![Logo](doc/images/ERD.png)
+
+# Features
+- ### Navigation bar
+A responsive navigation bar is in place. Concentrating on 'mobile first' design, the navigation bar incorporates a clickable burger icon with a drop down menu on mobile. There is a burger icon at tablet size too, but when moving to monitor size the burger disappears and a navigation bar appears with options to navigate to pages; 'Blog' which is essentially the home page, 'About' or 'Book Consultancy'. See mobile and monitor screenshots below.
+
+![Logo](doc/screenshots/navbar.png)
