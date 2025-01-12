@@ -10,4 +10,43 @@ Github repository, click
 
 # Table of Contents
 - [Introduction](#Lets Renovate - Home Decorating Blog)
+
+## Wireframes
+#### Home Page
+Mobile View
+![Logo](doc/wireframes/homepage.png)
+Desktop View
+![Logo](static/images/logo.png)
+
+#### About Page
+
+Mobile View
+
+![Logo](doc/wireframes/aboutpagemob.png)
+
+Desktop View
+
+![Logo](doc/wireframes/aboutpage.png)
+
+#### Inspiration Page
+
+Mobile View
+
+![Logo](doc/wireframes/inspirationpagemob.png)
+
+Desktop View
+
+![Logo](/doc/wireframes/inspiredpage.png)
+
+#### Design Pages
+Mobile View
+![Logo](static/images/logo.png)
+Desktop View
+![Logo](static/images/logo.png)
+
+#### Consultancy Page
+Mobile View
+![Logo](static/images/logo.png)
+Desktop View
+![Logo](static/images/logo.png)
 .
