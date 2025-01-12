@@ -292,6 +292,9 @@ body {
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
+    flex: 1 1 30%;  /* Allows each image container to take up roughly 30% of the row width */
+    margin: 10px;
+    gap: 10px; 
 }
 .specialists-list {
     display: grid;
