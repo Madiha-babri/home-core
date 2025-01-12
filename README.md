@@ -44,6 +44,18 @@ I used an agile approach to project management. The Lets Renovate development pr
 
 ### User stories
 1. 
+
+### Typography
+- For main pages Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, were used.
+
+### Colour Scheme
+In line with Lets Renovate theme, I chose contrast color palette:
+- Primary Color: #445261; (dark, muted blue-gray)
+- Secondary Color: #9b42e4; ( vibrant shade of purple)
+- Background: #fff (White) This combination ensures clarity, accessibility, and a professional appearance, allowing for easy navigation throughout the site.
+
+![Logo](doc/images/colorpalette.png)
+
 ## Wireframes
 #### Home Page
 Mobile View
