@@ -21,7 +21,7 @@ The platform ensures accessibility across all devices and browsers, and its goal
 - Educate Users on the Psychological Impact of Colors. Provide visitors with in-depth knowledge about how different colors can influence mood, productivity, and well-being in various home environments.
 - Empowering users with information on color psychology helps them make informed decisions about their home renovation choices. It positions the website as an authoritative source of expertise.
 - Encourage designers and professionals to get in contact if they would like to collaborate on blog posts or offer their services for our renovation and designing. 
-### Target audience
+### Target Audience
 - Homeowners and Renters Seeking Renovation Ideas, whether it's a full renovation or a smaller refresh.
 -  Individuals Interested in Mental Health and Wellness, People who are actively seeking to improve their mental and emotional well-being through their living environment.
 - Interior Designers and Home Design Professionals,  Professionals who are either already working in the design industry or aspiring to learn more about the psychology of color in home design.
@@ -50,56 +50,64 @@ I used an agile approach to project management. The Lets Renovate development pr
 
 ### Colour Scheme
 In line with Lets Renovate theme, I chose contrast color palette:
-- Primary Color: #445261; (dark, muted blue-gray)
-- Secondary Color: #9b42e4; ( vibrant shade of purple)
-- Background: #fff (White) This combination ensures clarity, accessibility, and a professional appearance, allowing for easy navigation throughout the site.
+- ### Primary Color: #445261; (dark, muted blue-gray)
+- ### Secondary Color: #9b42e4; ( vibrant shade of purple)
+- ### Background: #fff (White) This combination ensures clarity, accessibility, and a professional appearance, allowing for easy navigation throughout the site.
 
 ![Logo](doc/images/colorpalette.png)
 
 ## Wireframes
-#### Home Page
-Mobile View
+Wireframes were created for the following key pages to ensure an intuitive user journey:
+
+- ### Home Page Wireframes
+- Mobile and Desktop
+
+
 ![Logo](doc/wireframes/homepage.png)
-Desktop View
-![Logo](static/images/logo.png)
 
-#### About Page:@;'>
+- #### About Page:
 
-Mobile View
+- Mobile View
 
 ![Logo](doc/wireframes/aboutpagemob.png)
 
-Desktop View
+- Desktop View
 
 ![Logo](doc/wireframes/aboutpage.png)
 
-#### Inspiration Page
+- #### Inspiration Page
 
-Mobile View
+- Mobile View
 
 ![Logo](doc/wireframes/inspirationpagemob.png)
 
-Desktop View
+- Desktop View
 
 ![Logo](/doc/wireframes/inspiredpage.png)
 
-#### Design Pages
+- #### Design Pages
 
-Mobile View
+- Mobile View
 
 ![Logo](doc/wireframes/designpagemob.png)
 
-Desktop View
+- Desktop View
 
 ![Logo](doc/wireframes/designpages.png)
 
-#### Consultancy Page
+- #### Consultancy Page
 
-Mobile View
+- Mobile View
 
 ![Logo](doc/wireframes/consultancymob.png)
 
-Desktop View
+- Desktop View
 
 ![Logo](doc/wireframes/consultancy.png)
-.
+
+### Database Schema - Entity Relationship Diagram
+The ERD shown below illustrates the relationships between the users, consultancy appointments, about page, collaborate form, and more. This is essential to demonstrate the relationships between the different models in the PostgreSQL database.
+
+The ERD also demonstrates the platform's role-based structure. In the diagram below it can be seen that User has a relationship to Post, Comment and Booking. Comment has a relationship with both User and Post.
+
+![Logo](doc/images/ERD.png)
