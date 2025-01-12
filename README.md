@@ -39,14 +39,22 @@ Desktop View
 ![Logo](/doc/wireframes/inspiredpage.png)
 
 #### Design Pages
+
 Mobile View
-![Logo](static/images/logo.png)
+
+![Logo](doc/wireframes/designpagemob.png)
+
 Desktop View
-![Logo](static/images/logo.png)
+
+![Logo](doc/wireframes/designpages.png)
 
 #### Consultancy Page
+
 Mobile View
-![Logo](static/images/logo.png)
+
+![Logo](doc/wireframes/consultancymob.png)
+
 Desktop View
-![Logo](static/images/logo.png)
+
+![Logo](doc/wireframes/consultancy.png)
 .
