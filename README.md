@@ -287,5 +287,73 @@ This includes social media iconsn and copyright.
 - Cloudinary - Cloud-based image storage solution
 - Whitenoise - For serving static files directly from Django
 
+# Libraries & Frameworks
+
+- Django - Backend framework
+- Django Crispy Forms - For elegant form rendering
+- Cloudinary - Media storage
+- Whitenoise - For serving static files
+
+# Tools & Programs
+
+- GitHub Projects - Project management and tracking
+- Heroku - Deployment and hosting
+- Balsamiq - Wireframes and design prototypes
+
+# Testing
+
+## Validation Testing
+
+- HTML: W3C Markup Validator.
+- CSS: W3C CSS Validator.
+- Python: PEP8 validation to ensure code quality.
+
+# Bugs
+
+
+
+# Deployment
+All code for this project was written in Visual Studio/Gitpod as the integrated development environment. GitHub was used for version control, and the application was deployed to Heroku from GitHub.
+
+## Pre-Deployment
+
+To ensure a successful deployment to Heroku, the following practices are to be followed (Experience from previous Django projects):
+
+- Requirements File:  The requirements.txt file must be kept up to date to ensure all imported Python modules are configured correctly for Heroku.
+- Procfile:  A Procfile was added to configure the application as a Gunicorn web app on Heroku.
+- Allowed Hosts:  In settings.py, the ALLOWED_HOSTS list was configured to include the Heroku app name and localhost. Example format:
+
+ALLOWED_HOSTS = ['your-app-name.herokuapp.com', 'localhost']
+
+- Environment Variables:  All sensitive data such as the DATABASE_URL, CLOUDINARY_URL, and SECRET_KEY were added to the .env file, which is ignored by Git using .gitignore. These variables are added to Heroku manually through the Config Vars section.
+
+## Deploying with Heroku
+
+The steps for deploying to Heroku are as follows (Experience from previous Django projects):
+
+1. Create New App: Log in to your Heroku account and click on the "Create New App" button.
+2. App Name: Choose a unique name for your app.
+3. Select Region: Choose the appropriate region (Europe was selected for this project).
+4. Create App: Click the "Create App" button to proceed.
+5. Deployment Method: In the "Deploy" tab, select GitHub as the deployment method.
+6. Connect to GitHub: Search for the repository name and click "Connect".
+7. Manual or Automatic Deployment: Select either manual or automatic deployment. Ensure the main branch is selected for deployment.
+8. Config Vars: In the "Settings" tab, click "Reveal Config Vars" and input the required environment variables.
+9. Buildpack: Select Node.js and Python as the buildpacks for your project.
+10. Deploy: Once the configuration is complete, click the "Deploy Branch" button. After successful deployment, a "View" button will appear to take you to the live site.
+
+# Credits
+
+- Django Documentation: The official docs were invaluable in setting up the project structure and solving specific issues.
+- Django Crispy Forms Documentation: Used to streamline form rendering.
+- Chatgpt AI: For some coding ideas
+- Favicon.io: For Favicon generation.
+- Google Fonts: For typography.
+- Mark Brisco - Code Institute: For general guidance.
+- John Rearden - Code Institute: General guidance
+
+
+
+
 
 
