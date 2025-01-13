@@ -36,6 +36,8 @@ I used an agile approach to project management. The Lets Renovate development pr
 - Should-Haves
 - Could-Haves
 
+![Logo](doc/screenshots/MosCowboard2.png)
+
 ### Sprints
 - Sprint 1: Initial Setup - Project, repository, environment setup.
 - Sprint 2: User Authentication, post & comment model.
@@ -44,7 +46,40 @@ I used an agile approach to project management. The Lets Renovate development pr
 - Sprint 5: Deployment & Testing
 
 ### User stories
-1. 
+1. As a site owner I can create a functional website so that users can benefit from the information
+2. As a site user I can clearly understand the layout/structure of website so that I can access the required section easily.
+3. As a site admin I can create a customised nav-bar so that different sections can be accessed anytime
+4. As a site user I can search anytime through search bar so that I can find what I am looking for on website. (Futire implementation)
+5. As a site user, I can view a paginated list of posts so that I can select which post I want to view."
+6. As a site user I can register and login into my account so that my progress save within the site
+7. As a Site User / Admin I can view comments on an individual post so that I can read the conversation
+8. As a **Site User ** I can modify or delete my comment on a post so that I can be involved in the conversation
+9. As a Site User, I can click on a post so that I can read the full text.
+10. As a Site Admin I can create, read, update and delete posts so that I can manage my blog content
+11. As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments
+12. As a site user I can press escape key so that I can return to home page. (Future implementation)
+13. As a site user I can see multiple home decoration ideas so that I can choose which style/design to choose
+14. As a site user I can find different innovative rooms/kitchen/washroom ideas so that I can uniquely design every section of my home
+15. As a site owner I can create a footer for all pages so that users can easily access the information from any page.
+16. As a Site User I can leave comments on a post so that I can be involved in the conversation
+17. As a Site Admin I can create draft posts so that I can finish writing the content later
+18. As a Site User I can register an account so that I can comment on a post
+19. As a Site User I can click on the About link so that I can read about the site.
+20. As a Site Admin I can create or update the about page content so that it is available on the site.
+21. As a site user I can see home designs and ideas for inspiration so that I can shop through images and implement designs
+22. As a student I need to research project ideas so that** I can choose a topic that aligns with my skills and meets the course requirements.
+23. As a student I need to define the purpose and target audience of my project so that I can create a solution that meets their needs effectively
+24. As a student, I need to create wireframes for my project, so that I can visually plan and structure my pages in alignment with user needs and project requirements.
+25. As a Site Owner I need to design the project’s user interface with consistent colors, fonts, and images, so that the project looks visually appealing and provides a good user experience.
+26. As a Site Owner I need to create an Entity-Relationship Diagram (ERD) to define my project’s data model,
+so that I can organize data relationships and ensure efficient database structure aligned with project requirements.
+27. As a student, I need to create a README file for my project, so that users and developers can easily understand the project’s purpose, installation process, and usage.
+28. As a Site Owner I can create collaboration form so that **potential collaborator can submit a request for collaboration.
+29. As a student I can test/validate all my codes, forms, languages etc so that I can pass all testing and show there is no error in coding
+30. As a Student I can develop creative layout of every posts in blog so that more pictures can be added after every paragraph (Future implementation)
+31. As a Site Owner I can *create a booking system so that people can book consultancy slots for home review and ideas
+32. As a Site Owner I can create a review model so that people can give reviews on designs and ideas present on app
+
 
 ### Typography
 - For main pages Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, were used.
@@ -310,6 +345,25 @@ This includes social media iconsn and copyright.
 - Python: PEP8 validation to ensure code quality.
 
 # Bugs
+- ### Bug Fix #1: INSTALLED_APPS Setting Causing about page Deployment Failure
+
+### Issue:
+During the initial setup, about app was not added in list of installed apps and it was not showing on website.
+
+### Steps Taken to Fix:
+all settings were checked step by step and 'about' app was eneterd in the list and it fixed the error.
+
+- ### Bug Fix #2: About Picture Issue
+### Issue:
+I added a picture in about page and it was not showing due to syntax error.
+
+### Steps Taken to Fix:
+The syntax was noted and fixed accordingly.
+
+![Logo](doc/bugs/Screenshot 2024-12-31 145535.png)
+
+
+
 
 
 
