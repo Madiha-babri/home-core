@@ -11,6 +11,31 @@ Github repository, click <a href="https://github.com/Madiha-babri/home-core">Her
 
 # Table of Contents
 1. <a href="#Lets Renovate - Home Decorating Blog">Introduction</a>
+2. <a href="#overview">Overview</a>
+3. <a href="#ux---user-experience">UX - User Experience</a>
+5. <a href="#features">Features</a>
+- <a href="#key-project-goals">Key project goals</a>
+- <a href="#target-audience">Target Audience</a>
+- <a href="#agile-methodologies">Agile Methodologies</a>
+- <a href="#moscow-prioritization">MoSCoW Prioritization</a>
+- <a href="#sprints">Sprints</a>
+- <a href="#wireframes">Wireframes</a>
+- <a href="#database-schema---entity-relationship-diagram">Database Schema - Entity Relationship Diagram</a>
+6. <a href="#features">Features</a>
+- <a href="#navigation-bar">Navigation bar</a>
+- <a href="#hero-image">Hero Image</a>
+- <a href="#about-page">About page</a>
+- <a href="#kitchen">Kitchen</a>
+- <a href="#consultancy-booking">Consultancy Booking</a>
+- <a href="#booking-crud-functionality-alerts">Booking CRUD Functionality Alerts</a>
+- <a href="#future-features">Future Features</a>
+- <a href="#footer">Footer</a>
+6. <a href="#technologies-&-languages-Used">Technologies & Languages Used</a>
+7. <a href="#lets-renovate---home-decorating-blog">Libraries & Frameworks</a>
+8. <a href="#bugs">Bugs</a>
+9. <a href="#deployment">Deployment</a>
+10. <a href="#credits">Credits</a>
+11. <a href="#acknowledgements">Acknowledgements</a>
 
 # Overview
 Lets Renovate is a fictitious business that started out as a blog and it focuses on latest insights in color psychology with expert design techniques to transform users home into a sanctuary that aligns with their personal style and psychological needs. This is a full stack website built using the Django web framework, with the aim of converting blog readers into home designers. This website provides the user with; a blog, comments sections, an about page to read about the business owner and the business itself, a form for users that are not registered to make collaboration requests, and an app for registered website users to make bookings for a consultancy after selecting design and style from inspiration page that provides different designs for different sections of home.
@@ -340,9 +365,35 @@ This includes social media iconsn and copyright.
 
 ## Validation Testing
 
-- HTML: W3C Markup Validator.
-- CSS: W3C CSS Validator.
-- Python: PEP8 validation to ensure code quality.
+- ### HTML: W3C Markup Validator.
+
+Every template in Apps was checked. Code was check through HTMl validator. Results for different page source are as followed:
+
+![Logo](doc/bugs/validate1.png)
+
+![Logo](doc/bugs/validate2.png)
+
+![Logo](doc/bugs/validate3.png)
+
+- ### Note:
+The errors shown in the above snippets is because base template was used from Django walkthrough project, all other templates are extending through the base.html and errors are caused due to summernote django templates. They are unable to fix, however all other errors caused due to personal coding are emitted/fixed.
+
+- ### CSS: W3C CSS Validator.
+
+Two stylesheets were created fot styling the project. One under static folder and other under staticfiles folder. Both tested and results are clear.
+
+![Logo](doc/bugs/validatecss.png)
+
+![Logo](doc/bugs/validatecss2.png)
+
+- ### Python: PEP8 validation to ensure code quality.
+
+All the files were tested manually through pep8 validator and results of few are attached below.
+
+![Logo](doc/bugs/pep8.png)
+
+![Logo](doc/bugs/pep82.png)
+
 
 # Bugs
 - ### Bug Fix #1: INSTALLED_APPS Setting Causing about page Deployment Failure
