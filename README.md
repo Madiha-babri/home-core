@@ -15,7 +15,8 @@ Github repository, click <a href="https://github.com/Madiha-babri/home-core">Her
 # Overview
 Lets Renovate is a fictitious business that started out as a blog and it focuses on latest insights in color psychology with expert design techniques to transform users home into a sanctuary that aligns with their personal style and psychological needs. This is a full stack website built using the Django web framework, with the aim of converting blog readers into home designers. This website provides the user with; a blog, comments sections, an about page to read about the business owner and the business itself, a form for users that are not registered to make collaboration requests, and an app for registered website users to make bookings for a consultancy after selecting design and style from inspiration page that provides different designs for different sections of home.
 
-The platform ensures accessibility across all devices and browsers, and its goal is to streamline the process of finding and scheduling consultations. In future iterations, LetsRenovate will add functionality for home designers providers to manage their schedules, send reminders to patients, and offer tools for patient-doctor communication.
+The platform ensures accessibility across all devices and browsers, and its goal is to streamline the process of finding and scheduling consultations. In future iterations, LetsRenovate will add functionality for home designers to have consultancy meetings at home with users, a designing tool where users can test designs and ideas on website before implementing them at their actual homes. 
+
 # UX - User Experience
 ### Key project goals
 - Educate Users on the Psychological Impact of Colors. Provide visitors with in-depth knowledge about how different colors can influence mood, productivity, and well-being in various home environments.
@@ -38,7 +39,7 @@ I used an agile approach to project management. The Lets Renovate development pr
 ### Sprints
 - Sprint 1: Initial Setup - Project, repository, environment setup.
 - Sprint 2: User Authentication, post & comment model.
-- Sprint 3: DEsign search & Appointment Booking System.
+- Sprint 3: Design search & Appointment Booking System.
 - Sprint 4: Static Pages & UI/UX Improvements.
 - Sprint 5: Deployment & Testing
 
@@ -51,8 +52,8 @@ I used an agile approach to project management. The Lets Renovate development pr
 ### Colour Scheme
 In line with Lets Renovate theme, I chose contrast color palette:
 - ### Primary Color: #445261; (dark, muted blue-gray)
-- ### Secondary Color: #9b42e4; ( vibrant shade of purple)
-- ### Background: #fff (White) This combination ensures clarity, accessibility, and a professional appearance, allowing for easy navigation throughout the site.
+- ### Secondary Color:  #9b42e4; ( vibrant shade of purple)
+- ### Background:  #fff (White) This combination ensures clarity, accessibility, and a professional appearance, allowing for easy navigation throughout the site.
 
 ![Logo](doc/images/colorpalette.png)
 
@@ -135,7 +136,7 @@ To clearly demonstrate the purpose of website "Welcome Section" is used. To expl
 ![Logo](doc/screenshots/welcomearea.png)
 
 - ### Blog Posts
-To explain the psychological factors with mental well being and home decoration, posts from different sides were usedcand posted in this section.
+To explain the psychological factors with mental well being and home decoration, posts from different sides were used and posted in this section.
 On desktop screens there are 3 blog posts displayed in a row and 6 on a page, with the option to use a next and previous button. Large laptop screens and monitor screens have the same layout as tablet size only the pictures are bigger.
 
 ![Logo](doc/screenshots/blogpost.png)
@@ -151,7 +152,7 @@ The user does not need to be logged in to view the about page. The hero image at
 ![Logo](doc/screenshots/formcob.png)
 
 - ### Renovate by Inspiration page
-This page contains hero-image and then div for steps section. It explains that if a user wants to book consultancy for renovating their home or design a new home from scratch, they can select difefrent designs from our website and after that make a booking for consultancy.
+This page contains hero-image and then div for steps section. It explains that if a user wants to book consultancy for renovating their home or design a new home from scratch, they can select different designs from our website and after that make a booking for consultancy.
 
 ![Logo](doc/screenshots/inspire.png)
 
