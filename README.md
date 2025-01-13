@@ -354,6 +354,7 @@ During the initial setup, about app was not added in list of installed apps and 
 all settings were checked step by step and 'about' app was eneterd in the list and it fixed the error.
 
 - ### Bug Fix #2: About Picture Issue
+
 ### Issue:
 I added a picture in about page and it was not showing due to syntax error.
 
@@ -363,6 +364,7 @@ The syntax was noted and fixed accordingly.
 ![Logo](doc/bugs/bug2.png)
 
  ### Bug Fix #3: Booking App wrong URL's
+
 ### Issue:
 I added an app for making bookings and it was not rendering.
 
@@ -371,15 +373,46 @@ The URL's were created correctly and pasted in right directions. it fixed the re
 
 ![Logo](doc/bugs/bug3.png)
 
+### Bug Fix #4: Booking consultancy CRUD functionality not working
+
+### Issue:
+I added CRUD functionality on Booking Consultancy, but after filling booking form the list page or confirmation alert was not coming due to incorrect "reverse path".
+
+### Steps Taken to Fix:
+The error was showing that no page named "post_details" found, it was wrong path. Real page that was supposed to come up after making booking was Consultancy list page.
+The bug was fixed by correcting the URL in views.py file and putting correct paths in urls.py file.
+
+![Logo](doc/bugs/bug4.png)
+
+### Bug Fix #5: CRUD Functionality
+
+### Issue:
+For customised Booking model, update and delete booking templates were created. Views were added for funstionilty to work but it was not showing on the website. it showed 404 error when tried to update/delete bookings
+
+### Steps Taken to Fix:
+I tried to change views and url paths but nothing was working properly. After spending many hours finally took help from student support and they guided me towards correct steps.
+Views were changed and correct paths were developed and everything started working properly.
+
+![Logo](doc/bugs/bug5.png)
 
 
-
-
-
+![Logo](doc/bugs/step5.png)
 
 
 # Deployment
 All code for this project was written in Visual Studio/Gitpod as the integrated development environment. GitHub was used for version control, and the application was deployed to Heroku from GitHub.
+
+## Creating Repository on GitHub
+
+- First make sure you are signed into Github and go to the code institutes template, which can be found here.
+- Then click on use this template and select Create a new repository from the drop-down. Enter the name for the repository and click Create repository from template.
+- Once the repository was created, I clicked the green gitpod button to create a workspace in gitpod so that I could write the code for the site.
+
+## Creating an app on Heroku
+
+- After creating the repository on GitHub, head over to heroku and sign in.
+- On the home page, click New and Create new app from the drop down.
+- Give the app a name(this must be unique) and select a region I chose Europe as I am in Europe, Then click Create app
 
 ## Pre-Deployment
 
@@ -408,7 +441,29 @@ The steps for deploying to Heroku are as follows (Experience from previous Djang
 9. Buildpack: Select Node.js and Python as the buildpacks for your project.
 10. Deploy: Once the configuration is complete, click the "Deploy Branch" button. After successful deployment, a "View" button will appear to take you to the live site.
 
+## Fork this repository:
+
+- Go to the GitHub repository
+- Click on the Fork button in the upper right-hand corner
+
+## Clone this Repository
+
+1. Clone this Repository
+2. Go to the GitHub repository.
+3. Click the "Code" button at the top of the page.
+4. Choose between 'HTTPS', 'SSH', or 'GitHub CLI' depending on your preference.
+5. Click the copy button to copy the URL.
+6. Open Git Bash.
+7. Change the working directory to where you want to clone the directory.
+Type:
+8. git clone https://github.com/easybulb/healmate
+9. Press Enter to create the local clone.
+
+- Note: The difference between a clone and a fork is that with a clone, you need permission to push changes to the original repository, whereas a fork creates an entirely new project under your GitHub account.
+
 # Credits
+
+## Code
 
 - Django Documentation: The official docs were invaluable in setting up the project structure and solving specific issues.
 - Django Crispy Forms Documentation: Used to streamline form rendering.
@@ -417,6 +472,18 @@ The steps for deploying to Heroku are as follows (Experience from previous Djang
 - Google Fonts: For typography.
 - Mark Brisco - Code Institute: For general guidance.
 - John Rearden - Code Institute: General guidance
+- Statement Beauty- For Booking Customised Model help was taking from <a href="https://statement-beauty-ec9472f892b1.herokuapp.com/">Statement Beauty</a>
+
+## Media
+
+- Icons and images sourced from Canva, ChatGPT and google pictures.
+- The hero image is from googlepixels
+- Designs styles images from <a href="https://theinspiredroom.net//">The Inspired Room</a>
+
+
+# Acknowledgements
+- My very special thankx to friends and family for supporting me in each and every step of creating this project. Specially my Husband "Mohammed Babri" for looking over all home chores and my three little girls while I was busy in creating this super project Lets Renovate.
+- My Mentors and advisors, Marko, John Rearden and Mark Briscoe for helping me at every stage. This project would not have been the same without his invaluable mentorship.
 
 
 
