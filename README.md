@@ -360,7 +360,18 @@ I added a picture in about page and it was not showing due to syntax error.
 ### Steps Taken to Fix:
 The syntax was noted and fixed accordingly.
 
-![Logo](doc/bugs/Screenshot 2024-12-31 145535.png)
+![Logo](doc/bugs/bug2.png)
+
+ ### Bug Fix #3: Booking App wrong URL's
+### Issue:
+I added an app for making bookings and it was not rendering.
+
+### Steps Taken to Fix:
+The URL's were created correctly and pasted in right directions. it fixed the rendering error.
+
+![Logo](doc/bugs/bug3.png)
+
+
 
 
 
