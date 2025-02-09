@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-q3@xjuna99rngzkzv)ju-y&dq-byq=+8836xw8g_=ir2i43x1)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-madihababri-homecore-snwap9mccen.ws.codeinstitute-ide.net',
+ALLOWED_HOSTS = [ '127.0.0.1',
                 '.herokuapp.com']
 
 
@@ -118,7 +118,7 @@ if 'test' in sys.argv:
     DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.codeinstitute-ide.net/",
+    "https://localhost",
     "https://*.herokuapp.com"
 ]
 
