@@ -32,10 +32,11 @@ Github repository, click <a href="https://github.com/Madiha-babri/home-core">Her
 - <a href="#footer">Footer</a>
 6. <a href="#technologies-&-languages-Used">Technologies & Languages Used</a>
 7. <a href="#lets-renovate---home-decorating-blog">Libraries & Frameworks</a>
-8. <a href="#bugs">Bugs</a>
-9. <a href="#deployment">Deployment</a>
-10. <a href="#credits">Credits</a>
-11. <a href="#acknowledgements">Acknowledgements</a>
+8. <a href="#testing">Testing</a>
+9. <a href="#bugs">Bugs</a>
+10. <a href="#deployment">Deployment</a>
+11. <a href="#credits">Credits</a>
+12. <a href="#acknowledgements">Acknowledgements</a>
 
 # Overview
 Lets Renovate is a fictitious business that started out as a blog and it focuses on latest insights in color psychology with expert design techniques to transform users home into a sanctuary that aligns with their personal style and psychological needs. This is a full stack website built using the Django web framework, with the aim of converting blog readers into home designers. This website provides the user with; a blog, comments sections, an about page to read about the business owner and the business itself, a form for users that are not registered to make collaboration requests, and an app for registered website users to make bookings for a consultancy after selecting design and style from inspiration page that provides different designs for different sections of home.
