@@ -613,7 +613,7 @@ The steps for deploying to Heroku are as follows (Experience from previous Djang
 6. Open Git Bash.
 7. Change the working directory to where you want to clone the directory.
 Type:
-8. git clone https://github.com/easybulb/healmate
+8. git clone https://github.com/Madiha-babri/home-core
 9. Press Enter to create the local clone.
 
 - Note: The difference between a clone and a fork is that with a clone, you need permission to push changes to the original repository, whereas a fork creates an entirely new project under your GitHub account.
