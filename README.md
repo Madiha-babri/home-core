@@ -371,6 +371,7 @@ This includes social media iconsn and copyright.
 ## Responsiveness
 
 ![Logo](doc/screenshots/responsive.png)
+![Logo](doc/screenshots/responsive.png)
 
 ## Smaller Screen
 
