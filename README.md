@@ -364,7 +364,98 @@ This includes social media iconsn and copyright.
 
 # Testing
 
+## Browser Compatibility
+
+![Logo](doc/screenshots/compatibility.png)
+
+## Responsiveness
+
+![Logo](doc/screenshots/responsive.png)
+
+## Smaller Screen
+
+- Home
+
+![Logo](doc/screenshots/homemob.png)
+
+- About
+
+![Logo](doc/screenshots/aboutmob.png)
+
+- consultancy
+
+![Logo](doc/screenshots/bookingmob.png)
+
+- Renovation
+
+![Logo](doc/screenshots/renomob.png)
+
+## Medium screen
+
+- Home
+
+![Logo](doc/screenshots/homescreen.png)
+
+- About
+
+![Logo](doc/screenshots/aboutscreen.png)
+
+- consultancy
+
+![Logo](doc/screenshots/bookingscreen.png)
+
+- Renovation
+
+![Logo](doc/screenshots/inspirescreen.png)
+
+## Lighthouse and Performance
+
+### Mobile
+
+- Home
+
+![Logo](doc/screenshots/moblh.png)
+
+- About
+
+![Logo](doc/screenshots/moblhabout.png)
+
+- Inspiration
+
+![Logo](doc/screenshots/moblh3.png)
+
+- Consultancy
+
+![Logo](doc/screenshots/moblhcon.png)
+
+### Desktop
+
+- Home
+
+![Logo](doc/screenshots/desktoplh.png)
+
+- About
+
+![Logo](doc/screenshots/desktoplhabout.png)
+
+- Inspiration
+
+![Logo](doc/screenshots/desktoplh3.png)
+
+- Consultancy
+
+![Logo](doc/screenshots/desktoplhcon.png)
+
+## Manual Testing
+
+### Testing Features
+
+![Logo](doc/screenshots/testingfeatures1.png)
+![Logo](doc/screenshots/testing2.png)
+
 ## Validation Testing
+
+
 
 - ### HTML: W3C Markup Validator.
 
