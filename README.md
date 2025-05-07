@@ -446,6 +446,20 @@ This includes social media iconsn and copyright.
 
 ![Logo](doc/screenshots/desktoplhcon.png)
 
+## Automated Testing
+
+I implented an automated test in test.views.py to ensure the blog's views function correctly.
+
+1. The "PostListViewTest" makes sure the homepage shows posts correctly by checking the right page is loaded, using the correct template, and showing the post content.
+2. The "PostDetailViewTest" checks the post detail page to ensure it loads properly, uses the right template, and shows the post’s title.
+
+Also an automated test in test.forms.py was implented for to ensure the comment form works as expected.
+
+The "TestCommentForm" has two main tests:
+1. Firstly, it defines a function, or class method, named test_form_is_valid.
+2. It then creates an instance of our CommentForm and fills out the body field of the form with a string - This is a great post.
+Finally, it uses an assert to determine if the form is valid.
+
 ## Manual Testing
 
 ### Testing Features
